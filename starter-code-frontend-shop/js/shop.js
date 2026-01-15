@@ -107,9 +107,11 @@ const cleanCart = () => {
 
 const cleanButton = document.getElementById("clean-cart");
 
-cleanButton.addEventListener("click", () => {
-  cleanCart(cart);
-});
+if (cleanButton) {
+  cleanButton.addEventListener("click", () => {
+    cleanCart(cart);
+  });
+}
 
 // Exercise 3
 const calculateTotal = () => {
@@ -185,7 +187,17 @@ const printCart = (cart) => {
 // ** Nivell II **
 
 // Exercise 7
-const removeFromCart = (id) => {};
+
+const removeFromCart = (id) => {
+  const index = cart.findIndex((product) => product.id == id);
+  if (index === -1) return;
+
+  if (cart[index].quantity > 1) {
+    cart[index].quantity--;
+  } else {
+    cart.splice(index, 1);
+  }
+};
 
 const open_modal = () => {
   printCart();
