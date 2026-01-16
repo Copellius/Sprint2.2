@@ -77,11 +77,9 @@ const total = 0;
 // Exercise 1
 
 const buy = (id) => {
-
   for (const product of products) {
     if (product.id == id && product.quantity !== undefined) {
       product.quantity++;
-
     } else if (product.id == id) {
       product.quantity = 1;
       cart.push(product);
@@ -109,20 +107,19 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let id = event.target.dataset.productId;
     buy(id);
-    updateCartCounter()
+    updateCartCounter();
   });
 });
 
 // Exercise 2
 const cleanCart = () => {
+  const cartList = document.getElementById("cart_list");
+  const totalPrice = document.getElementById("total_price");
 
-  const cartList = document.getElementById("cart_list")
-  const totalPrice = document.getElementById("total_price")
-
-  cartList.innerHTML = ""
+  cartList.innerHTML = "";
   cart.length = 0;
 
-  totalPrice.textContent = "0.00"
+  totalPrice.textContent = "0.00";
 };
 
 const cleanButton = document.getElementById("clean-cart");
@@ -167,7 +164,6 @@ for (const btn of cartButton) {
   btn.addEventListener("click", () => {
     console.log(calculateTotal());
     printCart(cart);
-    console.log(cart);
   });
 }
 

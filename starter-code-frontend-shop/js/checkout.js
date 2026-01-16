@@ -3,8 +3,6 @@
 const form = document.getElementById("form");
 
 const validate = () => {
- 
-
   const fInfo = {
     fName: document.getElementById("fName"),
     fLastN: document.getElementById("fLastN"),
@@ -22,7 +20,7 @@ const validate = () => {
   for (const key in fInfo) {
     const input = fInfo[key];
     const value = input.value.trim();
-    const min = 3
+    const min = 3;
 
     let isValid = true;
 

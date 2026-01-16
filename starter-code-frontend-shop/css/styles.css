@@ -61,7 +61,11 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #f1f5f9;
+  --bs-btn-bg: #f4b6c2;
+  --bs-btn-border: #f4b6c2;
+  --bs-btn-clr: #222;
+
 }
 
 *,
@@ -3010,6 +3014,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -4033,8 +4038,10 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  background: #fff;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -4053,6 +4060,8 @@ textarea.form-control-lg {
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -4066,7 +4075,13 @@ textarea.form-control-lg {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  border-radius: 0.5rem;
 }
+
+.navbar-nav .nav-link:hover {
+  background: rgba(13,110,253,0.08);
+}
+
 .navbar-nav .dropdown-menu {
   position: static;
 }
@@ -4091,6 +4106,16 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
+
+#count_product {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0.25em 0.55em;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     transition: none;
@@ -4124,6 +4149,7 @@ textarea.form-control-lg {
   .navbar-expand-sm {
     flex-wrap: nowrap;
     justify-content: flex-start;
+
   }
   .navbar-expand-sm .navbar-nav {
     flex-direction: row;
@@ -4230,6 +4256,7 @@ textarea.form-control-lg {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
+ 
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
@@ -4240,6 +4267,8 @@ textarea.form-control-lg {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+       padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .navbar-expand-lg .navbar-nav-scroll {
     overflow: visible;
@@ -4513,11 +4542,18 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #ffffff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -4544,6 +4580,7 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+  text-align: center;
 }
 
 .card-title {
@@ -4615,6 +4652,15 @@ textarea.form-control-lg {
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
+
+.card-img-top {
+  height: 180px;
+  object-fit: contain;
+  padding: 12px;
+  padding-top:30px;
+  background: #fff;
+}
+
 
 .card-img,
 .card-img-bottom {
