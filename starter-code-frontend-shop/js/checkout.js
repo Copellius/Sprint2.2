@@ -3,7 +3,7 @@
 const form = document.getElementById("form");
 
 const validate = () => {
-  let error = 0;
+ 
 
   const fInfo = {
     fName: document.getElementById("fName"),
@@ -16,6 +16,8 @@ const validate = () => {
 
   const regexE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const regexP = /^(?=.*[0-9])(?=.*[a-zA-Z]).+$/;
+
+  let error = 0;
 
   for (const key in fInfo) {
     const input = fInfo[key];
